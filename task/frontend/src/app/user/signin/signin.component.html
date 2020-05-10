@@ -1,0 +1,95 @@
+<div class="background">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Signin Input -->
+      <div class="col align-self-center">
+        <div class="container">
+          <h1 class="text-center head-up"><img class="anime" src="./../../assets/check.png" alt=""> Task Reminder</h1>
+          <div class="row">
+            <div class="col-md-6">
+
+              <h3 class="text-center" style="margin-top:10%"> hey there !!!</h3>
+              <br>
+              <h6>Signin to your account. </h6>
+              <br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" [(ngModel)]="email">
+                <mat-hint [ngStyle]="{}">verified email!</mat-hint>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  umm..!enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <br><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" type="password" [(ngModel)]="password">
+              </mat-form-field>
+              <br>
+              <h6>Not a user yet? <a [routerLink]="['/sign-up']">SignUp</a> </h6>
+              <h6 style="cursor:pointer" [routerLink]="['/forgot-password']">Forgot password.</h6>
+              <br>
+              <button mat-raised-button class="singinbtn mat-elevation-z8" color='primary' (click)="submit()"><i class="material-icons">navigate_next</i></button>
+              <br>
+              <hr>
+            </div>
+
+            <div class="col-md-6">
+              <div class=" text-center" style="margin-top:10%">
+
+                <b> Task Reminder is a real time task management application for you to take care of your health</b>
+              </div>
+              <hr>
+
+              <mat-card class="card mat-card-primary task-card mat-elevation-z8 anime1">
+                <h4 class="task-head">Tasks</h4>
+                <button mat-icon-button matTooltip="Edit" color="primary" class="float-right"><i class="material-icons">
+                  edit</i></button>
+                <br>
+                <br>
+
+                <hr>
+                <ul class="task-ul">
+                  <li>
+                    <mat-checkbox matTooltip="Mark Complete" class="example-margin" color="primary">
+                      Stuff to get done :-
+                    </mat-checkbox>
+
+                    <ul>
+                      <li class="subtask-ul">
+                        <button class="costum-checkBox" matTooltip="Mark Complete">
+                          Eat Med1.
+                        </button>
+                      </li>
+                      <li class="subtask-ul">
+                        <button class="costum-checkBox" matTooltip="Mark Complete">
+                          Eat Med2.
+                        </button>
+                      </li>
+                      <li class="subtask-ul">
+                        <button class="costum-checkBox" matTooltip="Mark Complete">
+                          Eat Med3.
+                        </button>
+                      </li>
+                      <li class="subtask-ul">
+                        <button class="costum-checkBox" matTooltip="Mark Complete">
+                          Get your blood work done.
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </mat-card>
+
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

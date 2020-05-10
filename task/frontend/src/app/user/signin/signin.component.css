@@ -1,0 +1,64 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .background{
+    background-image: url("../../../assets/background.jpg");
+    min-height: -webkit-fill-available;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .singinbtn{
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  .toggle-margin{
+    margin: 15px !important;
+  }
+
+  .head-up{
+    margin-top: 6% !important;
+  }
+
+  .head-down{
+    margin-bottom: 6% !important;
+  }
+  mat-form-field.mat-form-field {
+    font-size: 16px;
+  }  
+
+
+.subtask-ul{
+    list-style: none;
+    padding-left: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.85em;
+    background-image: url('./../../../assets/checkbox.jpg');
+    background-repeat: no-repeat;
+    background-size: 18px;
+    cursor: default !important;
+}
+.subtask-ul:hover{
+    list-style: none;
+    padding-left: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default !important;
+    background-image: url('./../../../assets/check2.jpg');
+    background-repeat: no-repeat;
+    background-size: 18px;
+ }
+
+.div-width{
+    width: 75%;
+}
