@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const shortid = require('shortid');
 const time = require('./../libs/timeLib');
-const passwordLib = require('./../libs/generatePasswordLib');
+//const passwordLib = require('./../libs/generatePasswordLib');
 const response = require('./../libs/responseLib')
 const logger = require('./../libs/loggerLib');
 const validateInput = require('../libs/paramsValidationLib')
@@ -107,7 +107,7 @@ let editUser = (req, res) => {
 
 
 // start user signup function 
-
+   
 let signUpFunction = (req, res) => {
 
     let validateUserInput = () => {
@@ -236,9 +236,11 @@ let signUpFunction = (req, res) => {
             })
         })
     }
+    
+
     validateUserInput(req, res)
         .then(createUser)
-        .then(generateToken)
+       .then(generateToken)
         .then(saveToken)
         .then((resolve) => {
             delete resolve.password
@@ -249,10 +251,9 @@ let signUpFunction = (req, res) => {
             console.log(err);
             res.send(err);
         })
+} //end user signup function 
 
-}// end user signup function 
-
-
+/*
 let socialSignIn = (req, res) =>{
 
     
@@ -293,7 +294,7 @@ let socialSignIn = (req, res) =>{
                 })
         })
     }// end create user function
-
+    /*
     let generateToken = (userDetails) => {
         console.log("generate token");
         return new Promise((resolve, reject) => {
@@ -361,9 +362,10 @@ let socialSignIn = (req, res) =>{
             })
         })
     }
-
+*/
 
     // Send mail after signUpFunction
+    /*
     let sendSignupMail = () => {
 
         let email = req.body.email
@@ -371,9 +373,9 @@ let socialSignIn = (req, res) =>{
         mail.signUpMail(email, fullName)
 
     }
-
+*/
     
-
+/*
  UserModel.findOne({ email: req.body.email })
                 .exec((err, retrievedUserDetails) => {
                     if (err) {
@@ -401,8 +403,8 @@ let socialSignIn = (req, res) =>{
 
                     } else {
 
-                        generateToken(retrievedUserDetails)
-                        .then(saveToken)
+                       // generateToken(retrievedUserDetails)
+                        //.then(saveToken)
                         .then((resolve) => {
                             delete resolve.password
                             let apiResponse = response.generate(false, 'User Login', 200, resolve)
@@ -418,7 +420,7 @@ let socialSignIn = (req, res) =>{
 
 
 }// end of Social signup function 
-
+*/
 
 
 //sending the forgot password mail
@@ -561,7 +563,7 @@ let loginFunction = (req, res) => {
             })
         })
     }
-
+   
     let generateToken = (userDetails) => {
         console.log("generate token");
         return new Promise((resolve, reject) => {
@@ -675,7 +677,7 @@ let logout = (req, res) => {
 module.exports = {
 
     signUpFunction: signUpFunction,
-    socialSignIn : socialSignIn,
+   // socialSignIn : socialSignIn,
     forgotPasswordFunction: forgotPasswordFunction,
     changePasswordFunction: changePasswordFunction,
     getAllUser: getAllUser,
@@ -685,4 +687,6 @@ module.exports = {
     loginFunction: loginFunction,
     logout: logout
 
-}// end exports
+}
+
+// end exports

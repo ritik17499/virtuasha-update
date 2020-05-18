@@ -17,7 +17,7 @@ module.exports.setRouter = (app) => {
 
     app.post(`${baseUrl}/signup`, userController.signUpFunction);
 
-   app.post(`${baseUrl}/socialSignup`, userController.socialSignIn);
+  // app.post(`${baseUrl}/socialSignup`, userController.socialSignIn);
 
 
     app.post(`${baseUrl}/forgot-password`, userController.forgotPasswordFunction);

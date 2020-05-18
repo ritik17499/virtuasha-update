@@ -11,7 +11,8 @@ const routeLoggerMiddleware = require('./app/middlewares/routeLogger.js');
 const globalErrorMiddleware = require('./app/middlewares/appErrorHandler');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-
+const cors = require('cors');
+app.use(cors());
 app.use(morgan('dev'));
 
 app.use(bodyParser.json());

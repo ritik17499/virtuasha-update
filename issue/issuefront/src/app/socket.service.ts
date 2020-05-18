@@ -7,6 +7,7 @@ import { HttpErrorResponse, HttpParams } from "@angular/common/http";
 @Injectable()
 export class SocketService {
   private url = 'http://api.issue.virtuasha.online';
+  //private url='http://localhost:3000';
   // private url ='http://tracking-node.akshaypatil.online';
   private socket;
   constructor(public http: HttpClient, public appService: AppService) {

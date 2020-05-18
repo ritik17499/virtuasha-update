@@ -145,7 +145,7 @@ export class SignInComponent implements OnInit {
 
             if (apiResponse.status === 200) {
               let card = document.getElementById('card');
-              card.classList.add('anime')
+             // card.classList.add('anime')
 
               Cookie.set('authtoken', apiResponse.data.authToken);
 

@@ -19,7 +19,7 @@ import { SocketService } from './socket.service';
 import { AppService } from './app.service';
 import { Error404Component } from './error404/error404.component';
 import { Error500Component } from './error500/error500.component';
-//import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { Error500Component } from './error500/error500.component';
     HomeComponent,
     Error404Component,
     Error500Component,
-    //ProfileComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +58,7 @@ import { Error500Component } from './error500/error500.component';
     RouterModule.forRoot([
       { path: 'sign-in', component: SigninComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      //{ path: 'profile/:userId', component: ProfileComponent },
+      { path: 'profile/:userId', component: ProfileComponent },
       { path: '500', component: Error500Component },
       { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
       { path: '**', component: Error404Component }

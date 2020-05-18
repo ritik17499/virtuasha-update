@@ -11,9 +11,8 @@ import { HttpErrorResponse, HttpParams } from '@angular/common/http';
 @Injectable()
 export class AppService {
 
-  //public url =  'http://api.chat.virtuasha.online/api/v1';
-  public url = 'http://api.chat.virtuasha.online';
-
+  //public url =  'http://localhost:3000/api/v1';
+  public url = 'http://api.virtuasha.online/api/v1';
   constructor(
     public http: HttpClient
   ) {

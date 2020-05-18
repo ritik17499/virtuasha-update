@@ -32,14 +32,14 @@ const routesPath = './app/routes';
 const controllersPath = './app/controllers';
 const libsPath = './app/libs';
 const middlewaresPath = './app/middlewares';
-
+/*
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     next();
 });
-
+*/
 //Bootstrap models
 fs.readdirSync(modelsPath).forEach(function (file) {
   if (~file.indexOf('.js')) require(modelsPath + '/' + file)
